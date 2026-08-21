@@ -6,6 +6,7 @@ import hashlib
 import smtplib
 from email.mime.text import MIMEText
 from datetime import timedelta
+# pyrefly: ignore [missing-import]
 import jwt
 import httpx
 import bcrypt
@@ -96,7 +97,9 @@ def google_login(response: Response):
     
     # If client ID is mock, bypass to local redirect callback directly
     if settings.GOOGLE_CLIENT_ID.startswith("mock_"):
-        callback_url = f"http://localhost:8000/api/auth/google/callback?code=mock_code_123&state={state}"
+        BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
+        callback_url = f"{BACKEND_URL}/auth/callback"
+        
         res = RedirectResponse(callback_url)
         res.set_cookie(
             key="oauth_state",

@@ -202,7 +202,7 @@ export default function App() {
 
   const handleGoogleSignIn = () => {
     savePendingAnalysis();
-    window.location.href = "http://localhost:8000/api/auth/google/login";
+    window.location.href = `${import.meta.env.VITE_API_URL || "http://localhost:8000"}/auth/google`
   };
 
   const handleSignIn = () => {

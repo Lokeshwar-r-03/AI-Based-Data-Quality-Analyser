@@ -1,4 +1,4 @@
-export const API_BASE_URL = "http://localhost:8000";
+export const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export async function fetchHealth() {
   const res = await fetch(`${API_BASE_URL}/api/health`, { credentials: "include" });
@@ -15,7 +15,7 @@ export async function uploadDataset(file) {
     body: formData,
     credentials: "include",
   });
-  
+
   if (!res.ok) {
     const err = await res.json();
     throw new Error(err.detail || "Upload failed");
