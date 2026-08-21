@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0e1a;
+  --bg-surface: #121724;
+  --bg-surface-accent: #171d2f;
+  --border-primary: rgba(255, 255, 255, 0.08);
+  --border-secondary: rgba(255, 255, 255, 0.15);
+  --text-primary-bright: #ffffff;
+  --text-primary: #f1f5f9;
+  --text-primary-muted: #cbd5e1;
+  --text-primary-soft: #94a3b8;
+  --text-secondary-bright: #cbd5e1;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --card-shadow: none;
+  --purple-accent: #6366f1;
+  --scrollbar-track: #090d16;
+  --scrollbar-thumb: #1e293b;
+  --scrollbar-thumb-hover: #334155;
+}
+
+.light {
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-accent: #f1f5f9;
+  --border-primary: #e2e8f0;
+  --border-secondary: #cbd5e1;
+  --text-primary-bright: #0f172a;
+  --text-primary: #1e293b;
+  --text-primary-muted: #334155;
+  --text-primary-soft: #475569;
+  --text-secondary-bright: #475569;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --purple-accent: #6366f1;
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Transition for Theme */
+body, header, main, footer, div, p, span, h1, h2, h3, h4, button, input, select, table, th, td, tr, a {
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, box-shadow 200ms ease;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* Toast Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 200ms ease-out forwards;
+}

@@ -1,0 +1,3 @@
+order_id,customer_id,total,status,created_at
+1002,C102,-50.0,paid,2026-08-18T10:05:00
+1003,C103,-50.0,refunded,2026-08-18T10:10:00

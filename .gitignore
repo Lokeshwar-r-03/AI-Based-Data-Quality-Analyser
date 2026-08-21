@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.venv/
+env/
+*.egg-info/
+
+# Node / React
+node_modules/
+dist/
+build/
+.vite/
+
+# Secrets — never commit these
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log

@@ -1,0 +1,12 @@
+order_id,customer_email,product_name,quantity,unit_price,total,order_date
+1001,alice@example.com,Wireless Mouse,2,25.00,50.00,2026-08-01
+1002,bob@example.com,USB-C Cable,1,40.00,40.00,2026-08-01
+1003,,Bluetooth Speaker,2,22.00,44.00,2026-08-02
+1004,carol@example.com,Desk Lamp,-1,35.00,-35.00,2026-08-02
+1004,carol@example.com,Desk Lamp,-1,35.00,-35.00,2026-08-02
+1005,dave@example.com,Mechanical Keyboard,1,999.00,999.00,2026-08-03
+1006,erin@example.com,Laptop Stand,3,15.00,45.00,2026-08-03
+1007,frank@example.com,Webcam,2,30.00,60.00,2026-08-04
+1008,grace@example.com,Noise Cancelling Headphones,1,18.00,180.00,2026-08-04
+1009,heidi@example.com,Phone Charger,1,20.00,20.00,2026-08-05
+1010,ivan@example.com,Monitor Stand,4,12.50,50.00,2026-08-05
