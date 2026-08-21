@@ -84,6 +84,10 @@ app.include_router(findings.router)
 app.include_router(report.router)
 app.include_router(users.router)
 
+@app.get("/")
+def root():
+    return {"message": "AI-Based Data Quality Analyser API", "docs": "/docs"}
+
 @app.get("/api/health")
 def health_check():
     # Verify AI connectivity status
