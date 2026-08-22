@@ -212,7 +212,8 @@ def google_callback(
         key="session_token",
         value=session_token,
         httponly=True,
-        samesite="lax",
+        secure=True,
+        samesite="none",
         max_age=7 * 24 * 3600
     )
     redirect_response.delete_cookie("oauth_state")
@@ -288,7 +289,8 @@ def signup(payload: SignupRequest, response: Response, db: Session = Depends(get
         key="session_token",
         value=session_token,
         httponly=True,
-        samesite="lax",
+        secure=True,
+        samesite="none",
         max_age=7 * 24 * 3600
     )
     return {"message": "Signup successful", "user": {"id": user.id, "email": user.email, "name": user.name}}
@@ -310,7 +312,8 @@ def login(payload: LoginRequest, response: Response, db: Session = Depends(get_d
         key="session_token",
         value=session_token,
         httponly=True,
-        samesite="lax",
+        secure=True,
+        samesite="none",
         max_age=7 * 24 * 3600
     )
     return {"message": "Login successful", "user": {"id": user.id, "email": user.email, "name": user.name}}
