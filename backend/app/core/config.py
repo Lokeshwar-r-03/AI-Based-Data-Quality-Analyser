@@ -25,14 +25,14 @@ class Settings(BaseSettings):
     GOOGLE_CLIENT_SECRET: str = ""
     GOOGLE_REDIRECT_URI: str = ""
     JWT_SECRET: str = ""
-    FRONTEND_URL: str = "http://localhost:5173"
+    FRONTEND_URL: str = "https://ai-based-data-quality-analyser.vercel.app"
     
     # SMTP configuration for Password Reset
     SMTP_HOST: str = "smtp.gmail.com"
     SMTP_PORT: int = 587
     SMTP_USER: str = ""
     SMTP_PASSWORD: str = ""
-    RESET_LINK_BASE_URL: str = "http://localhost:5173/reset-password"
+    RESET_LINK_BASE_URL: str = "https://ai-based-data-quality-analyser.vercel.app/reset-password"
     
     # Weights and thresholds
     CONFIDENCE_WEIGHT_STAT: float = 0.3

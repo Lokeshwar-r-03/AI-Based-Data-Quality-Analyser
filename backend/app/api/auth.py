@@ -98,7 +98,7 @@ def google_login(response: Response):
     # If client ID is mock, bypass to local redirect callback directly
     if settings.GOOGLE_CLIENT_ID.startswith("mock_"):
         BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
-        callback_url = f"{BACKEND_URL}/auth/callback"
+        callback_url = f"{BACKEND_URL}/api/auth/callback"
         
         res = RedirectResponse(callback_url)
         res.set_cookie(
